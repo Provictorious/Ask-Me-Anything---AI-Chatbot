@@ -20,12 +20,13 @@ st.title("Ask Me Anything - AI Chatbot")
 user_quest = st.text_input("Type the question that you are haunting for:")
 btn = st.button("Click here now!")
 
+
 if btn and user_quest:
     result = LLM_Response(user_quest)
     st.subheader("Response : ")
     for word in result:
         st.text(word.text)
-
+        
 
 
 st.sidebar.markdown("---")
